@@ -36,6 +36,10 @@
         "source": "com.example.walletapp-main-33:/layout/dialog_operations.xml"
     },
     {
+        "merged": "com.example.walletapp-merged_res-31:/drawable_fading_circle.xml.flat",
+        "source": "com.example.walletapp-main-33:/drawable/fading_circle.xml"
+    },
+    {
         "merged": "com.example.walletapp-merged_res-31:/drawable_bg_main.webp.flat",
         "source": "com.example.walletapp-main-33:/drawable/bg_main.webp"
     },

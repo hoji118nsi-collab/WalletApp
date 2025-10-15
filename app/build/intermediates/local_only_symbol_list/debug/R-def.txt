@@ -14,6 +14,7 @@ drawable btn_circle
 drawable button_background
 drawable circle_bg
 drawable circle_button
+drawable fading_circle
 font shabnam
 id bgImage
 id btnDeposit

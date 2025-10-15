@@ -9,7 +9,7 @@
     <color name="teal_700">#004D40</color>
     <color name="white">#FFFFFF</color>
     <string name="app_name">WalletApp</string>
-    <style name="CircleImageView" parent="">
+    <style name="CircleImageView" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
