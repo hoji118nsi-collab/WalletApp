@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
-/** Dialog صفحه عملیات با دکمه‌ها و اندازه داینامیک */
 class OperationsDialog(
     private val wallet: Int,
     private val invest: Int,
@@ -22,23 +21,23 @@ class OperationsDialog(
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.dialog_operations, container, false)
 
-        // تلاش برای بارگذاری فونت شبنم
+        // بارگذاری فونت شبنم
         try {
             shabnamFont = Typeface.createFromAsset(requireContext().assets, "fonts/shabnam.ttf")
         } catch (e: Exception) {
             Toast.makeText(context, "فونت شبنم پیدا نشد.", Toast.LENGTH_SHORT).show()
         }
 
-        // وقتی روی بک‌گراند کلیک شد، دیالوگ بسته شود
         view.findViewById<View>(R.id.overlay).setOnClickListener { dismiss() }
 
-        // محاسبه اندازه مربعی متناسب با صفحه
+        // اندازه مربع دیالوگ برای CardView دایره‌ای
         val metrics = DisplayMetrics()
         requireActivity().windowManager.defaultDisplay.getMetrics(metrics)
         val size = (metrics.widthPixels.coerceAtMost(metrics.heightPixels) * 0.8).toInt()
         val dialogCard = view.findViewById<View>(R.id.dialogCard)
         dialogCard.layoutParams.width = size
         dialogCard.layoutParams.height = size
+        dialogCard.requestLayout()
 
         // دکمه‌ها
         val buttons = listOf(
@@ -50,7 +49,7 @@ class OperationsDialog(
             view.findViewById<Button>(R.id.btnTransferInvest)
         )
 
-        // اعمال فونت شبنم اگر وجود داشت
+        // اعمال فونت شبنم
         shabnamFont?.let { font ->
             buttons.forEach { it.typeface = font }
         }
@@ -60,24 +59,19 @@ class OperationsDialog(
             onUpdate(wallet + 1000, invest + 2000)
             dismiss()
         }
-
         view.findViewById<Button>(R.id.btnNewPurchase).setOnClickListener {
             onUpdate(wallet + 500, invest + 1000)
             dismiss()
         }
-
         view.findViewById<Button>(R.id.btnViewPurchases).setOnClickListener {
             Toast.makeText(context, "مشاهده خریدها", Toast.LENGTH_SHORT).show()
         }
-
         view.findViewById<Button>(R.id.btnStats).setOnClickListener {
             Toast.makeText(context, "آمار ماهانه و سالانه", Toast.LENGTH_SHORT).show()
         }
-
         view.findViewById<Button>(R.id.btnFuturePurchases).setOnClickListener {
             Toast.makeText(context, "لیست خریدهای آتی", Toast.LENGTH_SHORT).show()
         }
-
         view.findViewById<Button>(R.id.btnTransferInvest).setOnClickListener {
             onUpdate(wallet, invest + wallet)
             dismiss()

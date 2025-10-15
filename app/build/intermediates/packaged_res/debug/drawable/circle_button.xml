@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- حالت فشرده شده (Pressed) -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#CBA3D6"/> <!-- یاسی تیره‌تر هنگام فشار -->
+            <stroke android:width="2dp" android:color="#FFFFFF"/>
+            <corners android:radius="50dp"/>
+        </shape>
+    </item>
+
+    <!-- حالت عادی -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#D8BFD8"/> <!-- یاسی روشن -->
+            <stroke android:width="2dp" android:color="#FFFFFF"/>
+            <corners android:radius="50dp"/>
+        </shape>
+    </item>
+
+</selector>

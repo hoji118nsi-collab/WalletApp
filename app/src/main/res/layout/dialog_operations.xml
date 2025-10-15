@@ -8,14 +8,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/dialogCard"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
-        android:background="#E0BBE4"
-        app:cardCornerRadius="24dp"
+        app:cardCornerRadius="150dp"
         app:cardElevation="8dp"
-        app:layout_constraintWidth_percent="0.8"
-        app:layout_constraintHeight_percent="0.8">
+        app:cardBackgroundColor="#D8BFD8">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,95 +28,89 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
-            <!-- دکمه‌ها با فونت شبنم -->
+            <!-- دکمه‌ها با اندازه dp و شعاع مشخص -->
             <Button
                 android:id="@+id/btnDeposit"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:text="ورود پول"
                 android:textSize="14sp"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/shabnam"
-                android:backgroundTint="@color/purple_500"
-                app:layout_constraintWidth_percent="0.2"
-                app:layout_constraintHeight_percent="0.2"
+                android:background="@drawable/circle_button"
+                android:gravity="center"
                 app:layout_constraintCircle="@id/centerPoint"
-                app:layout_constraintCircleRadius="140dp"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="270" />
 
             <Button
                 android:id="@+id/btnNewPurchase"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:text="ثبت خرید جدید"
                 android:textSize="14sp"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/shabnam"
-                android:backgroundTint="@color/teal_700"
-                app:layout_constraintWidth_percent="0.2"
-                app:layout_constraintHeight_percent="0.2"
+                android:background="@drawable/circle_button"
+                android:gravity="center"
                 app:layout_constraintCircle="@id/centerPoint"
-                app:layout_constraintCircleRadius="140dp"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="330" />
 
             <Button
                 android:id="@+id/btnViewPurchases"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:text="مشاهده خریدها"
                 android:textSize="14sp"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/shabnam"
-                android:backgroundTint="@color/purple_200"
-                app:layout_constraintWidth_percent="0.2"
-                app:layout_constraintHeight_percent="0.2"
+                android:background="@drawable/circle_button"
+                android:gravity="center"
                 app:layout_constraintCircle="@id/centerPoint"
-                app:layout_constraintCircleRadius="140dp"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="30" />
 
             <Button
                 android:id="@+id/btnStats"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:text="آمار ماهانه/سالیانه"
                 android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/shabnam"
-                android:backgroundTint="@color/teal_200"
-                app:layout_constraintWidth_percent="0.2"
-                app:layout_constraintHeight_percent="0.2"
+                android:background="@drawable/circle_button"
+                android:gravity="center"
                 app:layout_constraintCircle="@id/centerPoint"
-                app:layout_constraintCircleRadius="140dp"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="90" />
 
             <Button
                 android:id="@+id/btnFuturePurchases"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:text="خریدهای آتی"
                 android:textSize="14sp"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/shabnam"
-                android:backgroundTint="@color/purple_700"
-                app:layout_constraintWidth_percent="0.2"
-                app:layout_constraintHeight_percent="0.2"
+                android:background="@drawable/circle_button"
+                android:gravity="center"
                 app:layout_constraintCircle="@id/centerPoint"
-                app:layout_constraintCircleRadius="140dp"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="150" />
 
             <Button
                 android:id="@+id/btnTransferInvest"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:text="انتقال به صندوق"
                 android:textSize="14sp"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/shabnam"
-                android:backgroundTint="@color/teal_400"
-                app:layout_constraintWidth_percent="0.2"
-                app:layout_constraintHeight_percent="0.2"
+                android:background="@drawable/circle_button"
+                android:gravity="center"
                 app:layout_constraintCircle="@id/centerPoint"
-                app:layout_constraintCircleRadius="140dp"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="210" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
