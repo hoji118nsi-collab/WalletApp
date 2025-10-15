@@ -2078,6 +2078,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purple_200
 color purple_500
 color purple_700
 color ripple_material_dark
@@ -2093,6 +2094,8 @@ color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color teal_200
+color teal_400
+color teal_700
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -3183,7 +3186,13 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnDeposit
+id btnFuturePurchases
+id btnNewPurchase
 id btnOperations
+id btnStats
+id btnTransferInvest
+id btnViewPurchases
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3235,6 +3244,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialogCard
 id dialog_button
 id dimensions
 id direct
@@ -3426,6 +3436,7 @@ id open_search_view_toolbar
 id open_search_view_toolbar_container
 id outline
 id outward
+id overlay
 id overshoot
 id packed
 id parallax
@@ -3720,6 +3731,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_operations
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
