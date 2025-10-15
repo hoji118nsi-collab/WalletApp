@@ -9,6 +9,10 @@
     <color name="teal_700">#004D40</color>
     <color name="white">#FFFFFF</color>
     <string name="app_name">WalletApp</string>
+    <style name="CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
     <style name="Theme.WalletApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

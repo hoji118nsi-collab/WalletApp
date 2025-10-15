@@ -12,6 +12,7 @@ drawable bg_main
 drawable box_background
 drawable btn_circle
 drawable button_background
+drawable circle_bg
 drawable circle_button
 font shabnam
 id bgImage
@@ -22,6 +23,7 @@ id btnOperations
 id btnStats
 id btnTransferInvest
 id btnViewPurchases
+id centerImage
 id centerPoint
 id dialogCard
 id investBalance
@@ -36,4 +38,5 @@ layout activity_main
 layout dialog_operations
 mipmap ic_launcher
 string app_name
+style CircleImageView
 style Theme.WalletApp

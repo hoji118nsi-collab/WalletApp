@@ -52,6 +52,10 @@
         "source": "com.example.walletapp-main-33:/drawable/circle_button.xml"
     },
     {
+        "merged": "com.example.walletapp-merged_res-31:/drawable_circle_bg.png.flat",
+        "source": "com.example.walletapp-main-33:/drawable/circle_bg.png"
+    },
+    {
         "merged": "com.example.walletapp-merged_res-31:/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "com.example.walletapp-main-33:/mipmap-xhdpi/ic_launcher.png"
     }
