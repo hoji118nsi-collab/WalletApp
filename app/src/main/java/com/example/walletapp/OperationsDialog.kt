@@ -5,6 +5,7 @@ import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 
@@ -25,30 +26,43 @@ class OperationsDialog(
         val metrics = DisplayMetrics()
         requireActivity().windowManager.defaultDisplay.getMetrics(metrics)
         val size = (metrics.widthPixels.coerceAtMost(metrics.heightPixels) * 0.8).toInt()
-        view.findViewById<View>(R.id.dialogCard).layoutParams.width = size
-        view.findViewById<View>(R.id.dialogCard).layoutParams.height = size
+        val dialogCard = view.findViewById<View>(R.id.dialogCard)
+        dialogCard.layoutParams.width = size
+        dialogCard.layoutParams.height = size
 
         // دکمه‌ها و هندل کردن آنها
-        view.findViewById<View>(R.id.btnDeposit).setOnClickListener {
+        val btnDeposit = view.findViewById<Button>(R.id.btnDeposit)
+        val btnNewPurchase = view.findViewById<Button>(R.id.btnNewPurchase)
+        val btnViewPurchases = view.findViewById<Button>(R.id.btnViewPurchases)
+        val btnStats = view.findViewById<Button>(R.id.btnStats)
+        val btnFuturePurchases = view.findViewById<Button>(R.id.btnFuturePurchases)
+        val btnTransferInvest = view.findViewById<Button>(R.id.btnTransferInvest)
+
+        // رویدادهای کلیک دکمه‌ها
+        btnDeposit.setOnClickListener {
             onUpdate(wallet + 1000, invest + 2000)
             dismiss()
         }
-        view.findViewById<View>(R.id.btnNewPurchase).setOnClickListener {
+
+        btnNewPurchase.setOnClickListener {
             onUpdate(wallet + 500, invest + 1000)
             dismiss()
         }
-        view.findViewById<View>(R.id.btnViewPurchases).setOnClickListener {
+
+        btnViewPurchases.setOnClickListener {
             Toast.makeText(context, "مشاهده خریدها", Toast.LENGTH_SHORT).show()
         }
-        // دکمه آمار ماهانه: اگر میخوای فعال باشد، XML هم id اضافه شود
-        // view.findViewById<View>(R.id.btnMonthlyStats)?.setOnClickListener {
-        //     Toast.makeText(context, "آمار ماهانه و سالانه", Toast.LENGTH_SHORT).show()
-        // }
-        view.findViewById<View>(R.id.btnFuturePurchases).setOnClickListener {
+
+        btnStats.setOnClickListener {
+            Toast.makeText(context, "آمار ماهانه و سالانه", Toast.LENGTH_SHORT).show()
+        }
+
+        btnFuturePurchases.setOnClickListener {
             Toast.makeText(context, "لیست خریدهای آتی", Toast.LENGTH_SHORT).show()
         }
-        view.findViewById<View>(R.id.btnTransferInvest).setOnClickListener {
-            onUpdate(wallet, invest + wallet) // انتقال کل موجودی به صندوق
+
+        btnTransferInvest.setOnClickListener {
+            onUpdate(wallet, invest + wallet)
             dismiss()
         }
 

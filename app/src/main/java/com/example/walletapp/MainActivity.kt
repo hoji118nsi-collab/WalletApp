@@ -1,6 +1,7 @@
 package com.example.walletapp
 
 import android.content.Context
+import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -11,15 +12,25 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var walletBalanceText: TextView
     private lateinit var investBalanceText: TextView
+    private lateinit var btnOperations: Button
+    private lateinit var shabnamFont: Typeface
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // بارگذاری فونت شبنم
+        shabnamFont = Typeface.createFromAsset(assets, "fonts/shabnam.ttf")
+
         // گرفتن ارجاع ویوها
         walletBalanceText = findViewById(R.id.walletBalance)
         investBalanceText = findViewById(R.id.investBalance)
-        val btnOperations = findViewById<Button>(R.id.btnOperations)
+        btnOperations = findViewById(R.id.btnOperations)
+
+        // اعمال فونت شبنم
+        walletBalanceText.typeface = shabnamFont
+        investBalanceText.typeface = shabnamFont
+        btnOperations.typeface = shabnamFont
 
         // خواندن موجودی‌ها از SharedPreferences
         val prefs = getSharedPreferences("wallet_data", Context.MODE_PRIVATE)
