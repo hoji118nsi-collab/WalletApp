@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/workspaces/WalletApp/app"
+    name=":app"
+    type="APP"
+    maven="WalletApp:app:"
+    agpVersion="8.1.1"
+    buildFolder="build"
+    bootClassPath="/home/codespace/Android/Sdk/platforms/android-34/android.jar:/home/codespace/Android/Sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

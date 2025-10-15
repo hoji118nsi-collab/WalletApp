@@ -1,0 +1,141 @@
+/workspaces/WalletApp/app/build.gradle:43: Warning: A newer version of androidx.core:core-ktx than 1.13.0 is available: 1.17.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.13.0'             // ✅ آپدیت شد
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/build.gradle:44: Warning: A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.7.0'       // همین نسخه قابل استفاده است
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/build.gradle:45: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.11.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/build.gradle:46: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/workspaces/WalletApp/app/src/main/res/drawable/button_background.xml:1: Warning: The resource R.drawable.button_background appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+^
+/workspaces/WalletApp/app/src/main/res/values/colors.xml:5: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFF</color>
+           ~~~~~~~~~~~~
+/workspaces/WalletApp/app/src/main/res/values/colors.xml:6: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#000000</color>
+           ~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/workspaces/WalletApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/workspaces/WalletApp/app/src/main/res/mipmap-hdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/workspaces/WalletApp/app/src/main/res/mipmap-mdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/workspaces/WalletApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/workspaces/WalletApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/workspaces/WalletApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://material.io/design/iconography/) your launcher icons should "use a
+   distinct silhouette", a "three-dimensional, front view, with a slight
+   perspective as if viewed from above, so that users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+/workspaces/WalletApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The image ic_launcher.png varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 683x683 dp (1024x1024 px), mipmap-mdpi/ic_launcher.png: 1024x1024 dp (1024x1024 px), mipmap-xhdpi/ic_launcher.png: 512x512 dp (1024x1024 px), mipmap-xxhdpi/ic_launcher.png: 341x341 dp (1024x1024 px), mipmap-xxxhdpi/ic_launcher.png: 256x256 dp (1024x1024 px) [IconDipSize]
+
+   Explanation for issues of type "IconDipSize":
+   Checks the all icons which are provided in multiple densities, all compute
+   to roughly the same density-independent pixel (dip) size. This catches
+   errors where images are either placed in the wrong folder, or icons are
+   changed to new sizes but some folders are forgotten.
+
+/workspaces/WalletApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The ic_launcher.png icon has identical contents in the following configuration folders: mipmap-anydpi-v26, mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi [IconDuplicatesConfig]
+
+   Explanation for issues of type "IconDuplicatesConfig":
+   If an icon is provided under different configuration parameters such as
+   drawable-hdpi or -v11, they should typically be different. This detector
+   catches cases where the same icon is provided in different configuration
+   folder which is usually not intentional.
+
+/workspaces/WalletApp/app/src/main/res/drawable/bg_main.webp: Warning: Found bitmap drawable res/drawable/bg_main.webp in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/workspaces/WalletApp/app/src/main/java/com/example/walletapp/MainActivity.kt:44: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        walletBalanceText.text = "${wallet} تومان"
+                                 ~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/src/main/java/com/example/walletapp/MainActivity.kt:45: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        investBalanceText.text = "${invest} تومان"
+                                 ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/workspaces/WalletApp/app/src/main/res/layout/activity_main.xml:30: Warning: Hardcoded string "کیف پول شایان", should use @string resource [HardcodedText]
+        android:text="کیف پول شایان"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/src/main/res/layout/activity_main.xml:61: Warning: Hardcoded string "موجودی کیف:", should use @string resource [HardcodedText]
+            android:text="موجودی کیف:"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/src/main/res/layout/activity_main.xml:70: Warning: Hardcoded string "0 تومان", should use @string resource [HardcodedText]
+            android:text="0 تومان"
+            ~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/src/main/res/layout/activity_main.xml:99: Warning: Hardcoded string "موجودی صندوق سرمایه:", should use @string resource [HardcodedText]
+            android:text="موجودی صندوق سرمایه:"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/src/main/res/layout/activity_main.xml:108: Warning: Hardcoded string "0 تومان", should use @string resource [HardcodedText]
+            android:text="0 تومان"
+            ~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/WalletApp/app/src/main/res/layout/activity_main.xml:121: Warning: Hardcoded string "عملیات", should use @string resource [HardcodedText]
+        android:text="عملیات"
+        ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 24 warnings

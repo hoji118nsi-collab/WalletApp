@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.1" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.walletapp.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.black"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="6"
+            column="12"
+            startOffset="196"
+            endLine="6"
+            endColumn="24"
+            endOffset="208"/>
+        <location id="R.color.white"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="5"
+            column="12"
+            startOffset="156"
+            endLine="5"
+            endColumn="24"
+            endOffset="168"/>
+        <entry
+            name="model"
+            string="color[black(D),teal_200(U),white(D),purple_700(U),purple_500(U)],drawable[bg_main(U),button_background(D),btn_circle(U),box_background(U)],font[shabnam(R)],id[walletBox(U),investBox(D),walletTitle(D),tvTitle(U),bgImage(D),investTitle(D),walletBalance(U),btnOperations(U),investBalance(U)],layout[activity_main(U)],mipmap[ic_launcher(U)],string[app_name(U)],style[Theme_WalletApp(U),Theme_MaterialComponents_DayNight_NoActionBar(R)];13^15^5^9^8^d^a^7,16^17^4^3^1;;;"/>
+        <location id="R.drawable.button_background"
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/button_background.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="3"
+            endColumn="9"
+            endOffset="154"/>
+    </map>
+
+</incidents>

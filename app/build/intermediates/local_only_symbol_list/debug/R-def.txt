@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_500
+color purple_700
+color teal_200
+color white
+drawable bg_main
+drawable box_background
+drawable btn_circle
+drawable button_background
+font shabnam
+id bgImage
+id btnOperations
+id investBalance
+id investBox
+id investTitle
+id tvTitle
+id walletBalance
+id walletBox
+id walletTitle
+layout activity_main
+mipmap ic_launcher
+string app_name
+style Theme.WalletApp
