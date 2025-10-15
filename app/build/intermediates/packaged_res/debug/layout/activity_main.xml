@@ -29,7 +29,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/shabnam"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
             android:text="موجودی کیف:"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/shabnam"/>
 
         <TextView
             android:id="@+id/walletBalance"
@@ -68,7 +68,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/shabnam"/>
     </LinearLayout>
 
     <LinearLayout
@@ -93,7 +93,7 @@
             android:text="موجودی صندوق سرمایه:"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/shabnam"/>
 
         <TextView
             android:id="@+id/investBalance"
@@ -104,7 +104,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/shabnam"/>
     </LinearLayout>
 
     <Button
@@ -114,7 +114,7 @@
         android:text="عملیات"
         android:textColor="@android:color/white"
         android:background="@drawable/btn_circle"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/shabnam"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
