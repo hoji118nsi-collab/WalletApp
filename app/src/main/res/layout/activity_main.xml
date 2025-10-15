@@ -8,7 +8,6 @@
     android:background="@android:color/transparent"
     tools:context=".MainActivity">
 
-    <!-- 🔹 بک‌گراند تمام‌صفحه -->
     <ImageView
         android:id="@+id/bgImage"
         android:layout_width="0dp"
@@ -22,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- 🔹 عنوان بالای صفحه -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -37,7 +35,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.05"/>
 
-    <!-- 🔹 باکس موجودی کیف -->
     <LinearLayout
         android:id="@+id/walletBox"
         android:layout_width="0dp"
@@ -74,7 +71,6 @@
             android:fontFamily="@font/shabnam"/>
     </LinearLayout>
 
-    <!-- 🔹 باکس موجودی صندوق سرمایه -->
     <LinearLayout
         android:id="@+id/investBox"
         android:layout_width="0dp"
@@ -111,7 +107,6 @@
             android:fontFamily="@font/shabnam"/>
     </LinearLayout>
 
-    <!-- 🔹 دکمه عملیات -->
     <Button
         android:id="@+id/btnOperations"
         android:layout_width="80dp"

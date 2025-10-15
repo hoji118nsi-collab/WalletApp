@@ -5,6 +5,7 @@ import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 /** صفحه اصلی اپلیکیشن با نمایش موجودی کیف پول و صندوق */
@@ -13,24 +14,31 @@ class MainActivity : AppCompatActivity() {
     private lateinit var walletBalanceText: TextView
     private lateinit var investBalanceText: TextView
     private lateinit var btnOperations: Button
-    private lateinit var shabnamFont: Typeface
+    private var shabnamFont: Typeface? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // بارگذاری فونت شبنم
-        shabnamFont = Typeface.createFromAsset(assets, "fonts/shabnam.ttf")
+        // ✅ بارگذاری امن فونت شبنم از res/font
+        // در صورتی که فونت در res/font قرار دارد، نیازی به assets نیست.
+        try {
+            shabnamFont = resources.getFont(R.font.shabnam)
+        } catch (e: Exception) {
+            Toast.makeText(this, "⚠️ فونت شبنم پیدا نشد، از فونت پیش‌فرض استفاده می‌شود.", Toast.LENGTH_SHORT).show()
+        }
 
         // گرفتن ارجاع ویوها
         walletBalanceText = findViewById(R.id.walletBalance)
         investBalanceText = findViewById(R.id.investBalance)
         btnOperations = findViewById(R.id.btnOperations)
 
-        // اعمال فونت شبنم
-        walletBalanceText.typeface = shabnamFont
-        investBalanceText.typeface = shabnamFont
-        btnOperations.typeface = shabnamFont
+        // اعمال فونت شبنم اگر موجود بود
+        shabnamFont?.let {
+            walletBalanceText.typeface = it
+            investBalanceText.typeface = it
+            btnOperations.typeface = it
+        }
 
         // خواندن موجودی‌ها از SharedPreferences
         val prefs = getSharedPreferences("wallet_data", Context.MODE_PRIVATE)
@@ -39,18 +47,22 @@ class MainActivity : AppCompatActivity() {
 
         updateBalanceTexts(walletBalance, investBalance)
 
-        // باز کردن دیالوگ عملیات
+        // باز کردن دیالوگ عملیات با هندل کردن کرش احتمالی
         btnOperations.setOnClickListener {
-            val dialog = OperationsDialog(walletBalance, investBalance) { newWallet, newInvest ->
-                walletBalance = newWallet
-                investBalance = newInvest
-                prefs.edit()
-                    .putInt("wallet_balance", walletBalance)
-                    .putInt("invest_balance", investBalance)
-                    .apply()
-                updateBalanceTexts(walletBalance, investBalance)
+            try {
+                val dialog = OperationsDialog(walletBalance, investBalance) { newWallet, newInvest ->
+                    walletBalance = newWallet
+                    investBalance = newInvest
+                    prefs.edit()
+                        .putInt("wallet_balance", walletBalance)
+                        .putInt("invest_balance", investBalance)
+                        .apply()
+                    updateBalanceTexts(walletBalance, investBalance)
+                }
+                dialog.show(supportFragmentManager, "OperationsDialog")
+            } catch (e: Exception) {
+                Toast.makeText(this, "خطا در باز کردن دیالوگ: ${e.message}", Toast.LENGTH_LONG).show()
             }
-            dialog.show(supportFragmentManager, "OperationsDialog")
         }
     }
 
