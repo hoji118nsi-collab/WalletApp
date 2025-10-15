@@ -21,7 +21,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- دکمه‌ها به صورت دایره‌ای، اندازه‌ها درصدی -->
+            <!-- View مرکزی برای چرخش دایره‌ای دکمه‌ها -->
+            <View
+                android:id="@+id/centerPoint"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- دکمه‌ها به صورت دایره‌ای و متقارن -->
             <Button
                 android:id="@+id/btnDeposit"
                 android:layout_width="0dp"
@@ -32,8 +42,8 @@
                 android:backgroundTint="@color/purple_500"
                 app:layout_constraintWidth_percent="0.18"
                 app:layout_constraintHeight_percent="0.18"
-                app:layout_constraintCircle="@id/dialogCard"
-                app:layout_constraintCircleRadius="100dp"
+                app:layout_constraintCircle="@id/centerPoint"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="270" />
 
             <Button
@@ -46,8 +56,8 @@
                 android:backgroundTint="@color/teal_700"
                 app:layout_constraintWidth_percent="0.18"
                 app:layout_constraintHeight_percent="0.18"
-                app:layout_constraintCircle="@id/dialogCard"
-                app:layout_constraintCircleRadius="100dp"
+                app:layout_constraintCircle="@id/centerPoint"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="330" />
 
             <Button
@@ -60,8 +70,8 @@
                 android:backgroundTint="@color/purple_200"
                 app:layout_constraintWidth_percent="0.18"
                 app:layout_constraintHeight_percent="0.18"
-                app:layout_constraintCircle="@id/dialogCard"
-                app:layout_constraintCircleRadius="100dp"
+                app:layout_constraintCircle="@id/centerPoint"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="30" />
 
             <Button
@@ -74,8 +84,8 @@
                 android:backgroundTint="@color/teal_200"
                 app:layout_constraintWidth_percent="0.18"
                 app:layout_constraintHeight_percent="0.18"
-                app:layout_constraintCircle="@id/dialogCard"
-                app:layout_constraintCircleRadius="100dp"
+                app:layout_constraintCircle="@id/centerPoint"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="90" />
 
             <Button
@@ -88,8 +98,8 @@
                 android:backgroundTint="@color/purple_700"
                 app:layout_constraintWidth_percent="0.18"
                 app:layout_constraintHeight_percent="0.18"
-                app:layout_constraintCircle="@id/dialogCard"
-                app:layout_constraintCircleRadius="100dp"
+                app:layout_constraintCircle="@id/centerPoint"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="150" />
 
             <Button
@@ -102,8 +112,8 @@
                 android:backgroundTint="@color/teal_400"
                 app:layout_constraintWidth_percent="0.18"
                 app:layout_constraintHeight_percent="0.18"
-                app:layout_constraintCircle="@id/dialogCard"
-                app:layout_constraintCircleRadius="100dp"
+                app:layout_constraintCircle="@id/centerPoint"
+                app:layout_constraintCircleRadius="120dp"
                 app:layout_constraintCircleAngle="210" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,7 @@ id btnOperations
 id btnStats
 id btnTransferInvest
 id btnViewPurchases
+id centerPoint
 id dialogCard
 id investBalance
 id investBox

@@ -39,6 +39,9 @@ public final class DialogOperationsBinding implements ViewBinding {
   public final Button btnViewPurchases;
 
   @NonNull
+  public final View centerPoint;
+
+  @NonNull
   public final CardView dialogCard;
 
   @NonNull
@@ -47,7 +50,7 @@ public final class DialogOperationsBinding implements ViewBinding {
   private DialogOperationsBinding(@NonNull FrameLayout rootView, @NonNull Button btnDeposit,
       @NonNull Button btnFuturePurchases, @NonNull Button btnNewPurchase, @NonNull Button btnStats,
       @NonNull Button btnTransferInvest, @NonNull Button btnViewPurchases,
-      @NonNull CardView dialogCard, @NonNull FrameLayout overlay) {
+      @NonNull View centerPoint, @NonNull CardView dialogCard, @NonNull FrameLayout overlay) {
     this.rootView = rootView;
     this.btnDeposit = btnDeposit;
     this.btnFuturePurchases = btnFuturePurchases;
@@ -55,6 +58,7 @@ public final class DialogOperationsBinding implements ViewBinding {
     this.btnStats = btnStats;
     this.btnTransferInvest = btnTransferInvest;
     this.btnViewPurchases = btnViewPurchases;
+    this.centerPoint = centerPoint;
     this.dialogCard = dialogCard;
     this.overlay = overlay;
   }
@@ -122,6 +126,12 @@ public final class DialogOperationsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.centerPoint;
+      View centerPoint = ViewBindings.findChildViewById(rootView, id);
+      if (centerPoint == null) {
+        break missingId;
+      }
+
       id = R.id.dialogCard;
       CardView dialogCard = ViewBindings.findChildViewById(rootView, id);
       if (dialogCard == null) {
@@ -131,7 +141,8 @@ public final class DialogOperationsBinding implements ViewBinding {
       FrameLayout overlay = (FrameLayout) rootView;
 
       return new DialogOperationsBinding((FrameLayout) rootView, btnDeposit, btnFuturePurchases,
-          btnNewPurchase, btnStats, btnTransferInvest, btnViewPurchases, dialogCard, overlay);
+          btnNewPurchase, btnStats, btnTransferInvest, btnViewPurchases, centerPoint, dialogCard,
+          overlay);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
