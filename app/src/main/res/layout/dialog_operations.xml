@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dialogCard"
+        android:layout_width="80%"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- دکمه‌ها به صورت دایره‌ای، اندازه‌ها درصدی -->
+            <Button
+                android:id="@+id/btnDeposit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="ورود پول"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/purple_500"
+                app:layout_constraintWidth_percent="0.18"
+                app:layout_constraintHeight_percent="0.18"
+                app:layout_constraintCircle="@id/dialogCard"
+                app:layout_constraintCircleRadius="0.45"
+                app:layout_constraintCircleAngle="270" />
+
+            <Button
+                android:id="@+id/btnNewPurchase"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="خرید جدید"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_700"
+                app:layout_constraintWidth_percent="0.18"
+                app:layout_constraintHeight_percent="0.18"
+                app:layout_constraintCircle="@id/dialogCard"
+                app:layout_constraintCircleRadius="0.45"
+                app:layout_constraintCircleAngle="330" />
+
+            <Button
+                android:id="@+id/btnViewPurchases"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="مشاهده خریدها"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/purple_200"
+                app:layout_constraintWidth_percent="0.18"
+                app:layout_constraintHeight_percent="0.18"
+                app:layout_constraintCircle="@id/dialogCard"
+                app:layout_constraintCircleRadius="0.45"
+                app:layout_constraintCircleAngle="30" />
+
+            <Button
+                android:id="@+id/btnStats"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="آمار ماهانه/سالیانه"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_200"
+                app:layout_constraintWidth_percent="0.18"
+                app:layout_constraintHeight_percent="0.18"
+                app:layout_constraintCircle="@id/dialogCard"
+                app:layout_constraintCircleRadius="0.45"
+                app:layout_constraintCircleAngle="90" />
+
+            <Button
+                android:id="@+id/btnFuturePurchases"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="خریدهای آتی"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/purple_700"
+                app:layout_constraintWidth_percent="0.18"
+                app:layout_constraintHeight_percent="0.18"
+                app:layout_constraintCircle="@id/dialogCard"
+                app:layout_constraintCircleRadius="0.45"
+                app:layout_constraintCircleAngle="150" />
+
+            <Button
+                android:id="@+id/btnTransferInvest"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="انتقال به صندوق"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_400"
+                app:layout_constraintWidth_percent="0.18"
+                app:layout_constraintHeight_percent="0.18"
+                app:layout_constraintCircle="@id/dialogCard"
+                app:layout_constraintCircleRadius="0.45"
+                app:layout_constraintCircleAngle="210" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
