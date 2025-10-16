@@ -16,6 +16,10 @@
         "source": "com.example.walletapp-main-33:/font/shabnam.ttf"
     },
     {
+        "merged": "com.example.walletapp-merged_res-31:/drawable_btn_circle_ripple.xml.flat",
+        "source": "com.example.walletapp-main-33:/drawable/btn_circle_ripple.xml"
+    },
+    {
         "merged": "com.example.walletapp-merged_res-31:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.example.walletapp-main-33:/mipmap-hdpi/ic_launcher.png"
     },
@@ -24,8 +28,16 @@
         "source": "com.example.walletapp-main-33:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
+        "merged": "com.example.walletapp-merged_res-31:/anim_zoom_out_fade.xml.flat",
+        "source": "com.example.walletapp-main-33:/anim/zoom_out_fade.xml"
+    },
+    {
         "merged": "com.example.walletapp-merged_res-31:/drawable_button_background.xml.flat",
         "source": "com.example.walletapp-main-33:/drawable/button_background.xml"
+    },
+    {
+        "merged": "com.example.walletapp-merged_res-31:/anim_zoom_in_bounce.xml.flat",
+        "source": "com.example.walletapp-main-33:/anim/zoom_in_bounce.xml"
     },
     {
         "merged": "com.example.walletapp-merged_res-31:/layout_activity_main.xml.flat",
@@ -34,6 +46,10 @@
     {
         "merged": "com.example.walletapp-merged_res-31:/layout_dialog_operations.xml.flat",
         "source": "com.example.walletapp-main-33:/layout/dialog_operations.xml"
+    },
+    {
+        "merged": "com.example.walletapp-merged_res-31:/anim_zoom_out.xml.flat",
+        "source": "com.example.walletapp-main-33:/anim/zoom_out.xml"
     },
     {
         "merged": "com.example.walletapp-merged_res-31:/drawable_fading_circle.xml.flat",
@@ -62,5 +78,9 @@
     {
         "merged": "com.example.walletapp-merged_res-31:/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "com.example.walletapp-main-33:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.walletapp-merged_res-31:/anim_zoom_in.xml.flat",
+        "source": "com.example.walletapp-main-33:/anim/zoom_in.xml"
     }
 ]

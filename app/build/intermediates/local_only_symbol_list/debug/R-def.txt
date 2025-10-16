@@ -1,5 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+anim zoom_in
+anim zoom_in_bounce
+anim zoom_out
+anim zoom_out_fade
 color black
 color purple_200
 color purple_500
@@ -11,6 +15,7 @@ color white
 drawable bg_main
 drawable box_background
 drawable btn_circle
+drawable btn_circle_ripple
 drawable button_background
 drawable circle_bg
 drawable circle_button
