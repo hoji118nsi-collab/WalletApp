@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- لایه گرادیانت اصلی -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#F0E6F7"
+                android:endColor="#E8D8EB"
+                android:angle="90" />
+        </shape>
+    </item>
+
+    <!-- لایه سایه ملایم بیرونی -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+            <corners android:radius="0dp" />
+            <padding android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="0dp"/>
+            <size android:width="0dp" android:height="0dp"/>
+            <gradient
+                android:startColor="#33000000"
+                android:endColor="#00000000"
+                android:angle="90"/>
+        </shape>
+    </item>
+
+    <!-- لایه نوردهی رادیال روی مرکز (اختیاری برای برجسته شدن دکمه‌ها) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200dp"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="#40FFFFFF"
+                android:endColor="#00FFFFFF" />
+        </shape>
+    </item>
+
+</layer-list>

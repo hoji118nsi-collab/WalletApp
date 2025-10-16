@@ -13,6 +13,7 @@ color teal_400
 color teal_700
 color white
 drawable bg_main
+drawable bg_operations
 drawable box_background
 drawable btn_circle
 drawable btn_circle_ripple
